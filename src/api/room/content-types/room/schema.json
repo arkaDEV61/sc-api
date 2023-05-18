@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms",
+  "info": {
+    "singularName": "room",
+    "pluralName": "rooms",
+    "displayName": "Room",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "floor": {
+      "type": "integer"
+    },
+    "dormitory_wing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dormitory-wing.dormitory-wing",
+      "inversedBy": "rooms"
+    },
+    "beds": {
+      "type": "integer"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "room"
+    },
+    "room_checkouts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::room-checkout.room-checkout",
+      "mappedBy": "room"
+    }
+  }
+}

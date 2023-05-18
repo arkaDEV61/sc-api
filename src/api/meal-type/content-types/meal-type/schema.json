@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meal_types",
+  "info": {
+    "singularName": "meal-type",
+    "pluralName": "meal-types",
+    "displayName": "MealType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "time": {
+      "type": "time"
+    },
+    "checkout_time": {
+      "type": "integer"
+    },
+    "meals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::meal.meal",
+      "mappedBy": "meal_type"
+    },
+    "meal_checkouts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::meal-checkout.meal-checkout",
+      "mappedBy": "meal_type"
+    },
+    "period": {
+      "type": "integer"
+    }
+  }
+}
