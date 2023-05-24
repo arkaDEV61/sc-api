@@ -38,6 +38,9 @@
       "relation": "oneToMany",
       "target": "api::room-checkout.room-checkout",
       "mappedBy": "room"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

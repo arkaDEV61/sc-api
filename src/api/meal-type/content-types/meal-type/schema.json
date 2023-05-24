@@ -35,6 +35,12 @@
     },
     "period": {
       "type": "integer"
+    },
+    "meal_menus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::meal-menu.meal-menu",
+      "mappedBy": "meal_type"
     }
   }
 }
