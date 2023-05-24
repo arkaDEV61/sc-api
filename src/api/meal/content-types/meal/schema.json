@@ -23,6 +23,12 @@
       "relation": "manyToOne",
       "target": "api::meal-type.meal-type",
       "inversedBy": "meals"
+    },
+    "meal_menu": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::meal-menu.meal-menu",
+      "inversedBy": "meals"
     }
   }
 }

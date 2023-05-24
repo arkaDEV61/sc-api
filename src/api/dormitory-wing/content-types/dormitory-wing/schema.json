@@ -23,6 +23,12 @@
       "relation": "oneToMany",
       "target": "api::room.room",
       "mappedBy": "dormitory_wing"
+    },
+    "mark": {
+      "type": "string"
+    },
+    "total_rooms": {
+      "type": "integer"
     }
   }
 }
